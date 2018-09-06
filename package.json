@@ -1,0 +1,19 @@
+{
+  "name": "canvas_project",
+  "version": "1.0.0",
+  "description": "Simple canvas project to get hands on experience with HTML5 canvas element",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohananagavenkat/canvas_practise.git"
+  },
+  "keywords": [
+    "canvas",
+    "html canvas"
+  ],
+  "author": "Mohana Naga Venkat <mohananagavenkat@gmail.com> (http://www.smnv.in/)",
+  "license": "MIT"
+}
