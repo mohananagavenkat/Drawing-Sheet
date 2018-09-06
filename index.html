@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Getting Hands On Experience With Canvas Element</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
@@ -17,7 +20,7 @@
                 <div class="options">
                     <div class="each-option">
                         <label for="lineCap">Line Cap</label>
-                        <select class="form-control" name="linecap" id="linecap">
+                        <select class="form-control" name="lineCap" id="lineCap">
                             <option value="round">Round</option>
                             <option value="butt">Butt</option>
                             <option value="square">Square</option>
@@ -25,7 +28,7 @@
                     </div>
                     <div class="each-option">
                         <label for="lineJoin">Line Join</label>
-                        <select class="form-control" name="linecap" id="linecap">
+                        <select class="form-control" name="lineJoin" id="lineJoin">
                             <option value="round">Round</option>
                             <option value="bevel">Bevel</option>
                             <option value="miter">Miter</option>
@@ -44,8 +47,8 @@
             <div class="color-options">
                 <h3 class="options-set-heading">Color Options </h3>
                 <p>Stroke Color : <label for="strokeStyle"></label></p>
-                <p>Fill Color : <label for="fillStyle"></label></p>
                 <input type="color" id="strokeStyle">
+                <p>Fill Color : <label for="fillStyle"></label></p>
                 <input type="color" id="fillStyle">
             </div>
         </aside>
@@ -62,6 +65,7 @@
             </div>
         </main>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
