@@ -129,4 +129,5 @@ main {
   height: 20px;
   transform: translateY(25%);
   background: #000;
+  border: 1px solid #fff;
 }
