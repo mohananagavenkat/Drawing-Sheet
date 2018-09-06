@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::before,
+*:after {
+  -webkit-box-shadow: inset hoff voff blur color;
+  -moz-box-shadow: inset hoff voff blur color;
+  box-shadow: inset hoff voff blur color;
+}
+
+:root {
+  --primary-color: #00aced;
+  --secondary-color: #e4e4e4;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: var(--secondary-color);
+}
+
+aside {
+  flex-basis: 40%;
+  max-width: 400px;
+  background: var(--primary-color);
+  padding: 1rem;
+  color: #fff;
+}
+
+aside h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.options-set-heading {
+  margin: 1rem 0;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each-option {
+  flex: 1 1 40%;
+  padding: 0.2rem;
+}
+
+.each-option label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+}
+
+main {
+  flex: 1 1 60%;
+  margin: 2rem;
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.15);
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #000;
+}
+
+.canvas-header {
+  width: 100%;
+  height: 72px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.canvas-header .icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.canvas-header .icons i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#mycanvas {
+  width: 100%;
+  height: calc(100% - 72px);
+  background: #fff;
+  border: 1px solid var(--primary-color);
+}
+
+.color-options input {
+  display: none;
+}
+
+.color-options p {
+  margin-bottom: 10px;
+}
+
+.color-options label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transform: translateY(25%);
+  background: #000;
+}
