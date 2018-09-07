@@ -52,6 +52,7 @@ let lastX = 0,
 
 const drawStart = function(event) {
   console.log(event);
+  this.focus();
   isDrawing = true;
   lastX = event.offsetX;
   lastY = event.offsetY;
