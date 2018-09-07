@@ -16,6 +16,10 @@
 :root {
   --primary-color: #00aced;
   --secondary-color: #e4e4e4;
+  --body-bg: #f6f2f2;
+  --primary-color-dark: #186d8d;
+  --box-shadow-blur: 0px 0px 30px 1px rgba(0, 0, 0, 0.15);
+  --box-shadow-no-blur: 0px 0px 0px 3px var(--primary-color-dark);
 }
 
 html {
@@ -31,7 +35,7 @@ body {
   height: 100%;
   min-height: 100vh;
   display: flex;
-  background: var(--secondary-color);
+  background: var(--body-bg);
 }
 
 aside {
@@ -39,12 +43,12 @@ aside {
   max-width: 400px;
   background: var(--primary-color);
   padding: 1rem;
-  color: #fff;
+  color: var(--body-bg);
 }
 
 aside h1 {
   text-align: center;
-  color: #fff;
+  color: var(--body-bg);
 }
 
 .options-set-heading {
@@ -73,48 +77,6 @@ aside h1 {
   border: none;
 }
 
-main {
-  flex: 1 1 60%;
-  margin: 2rem;
-  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.15);
-}
-
-.canvas-wrapper {
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background: #000;
-}
-
-.canvas-header {
-  width: 100%;
-  height: 72px;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  color: #fff;
-}
-
-.canvas-header .icons {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.canvas-header .icons i {
-  font-size: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-#mycanvas {
-  width: 100%;
-  height: calc(100% - 72px);
-  background: #fff;
-  border: 1px solid var(--primary-color);
-}
-
 .color-options input {
   display: none;
 }
@@ -129,5 +91,62 @@ main {
   height: 20px;
   transform: translateY(25%);
   background: #000;
-  border: 1px solid #fff;
+  border: 1px solid var(--body-bg);
+}
+
+.form-control:focus,
+.form-control:active,
+label.color-label:focus,
+label.color-label:active {
+  box-shadow: var(--box-shadow-no-blur);
+}
+
+main {
+  flex: 1 1 60%;
+  margin: 2rem;
+  box-shadow: var(--box-shadow-blur);
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.canvas-header {
+  width: 100%;
+  height: 72px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--body-bg);
+}
+
+.canvas-header .icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.canvas-header .icons i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.7s;
+}
+
+.canvas-header .icons i:focus,
+.canvas-header .icons i:active,
+.canvas-header .icons i:hover {
+  outline: none;
+  background: var(--primary-color-dark);
+}
+#mycanvas {
+  width: 100%;
+  height: calc(100% - 72px);
+  background: var(--body-bg);
+  border: 1px solid var(--primary-color);
 }
